@@ -1,7 +1,12 @@
 //Component Base Class - abstract because is used only for inheritance
 //abstract methods - to show the idea behind this class
 
-export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
+//dont want named export -> default
+
+export default abstract class Component<
+  T extends HTMLElement,
+  U extends HTMLElement
+> {
   templateElement: HTMLTemplateElement;
   hostElement: HTMLElement;
   element: HTMLElement;

@@ -1,9 +1,12 @@
-import { Component } from "./base-component.js";
+import BaseComponent from "./base-component.js"; //default export -> any name
 import { Validatable } from "../utils/validation.js";
 import { Binder } from "../decorators/autobind.js";
 import { projectState } from "../state/project.js";
 
-export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
+export class ProjectInput extends BaseComponent<
+  HTMLDivElement,
+  HTMLFormElement
+> {
   titleInputElement: HTMLInputElement;
   descriptionInputElement: HTMLInputElement;
   peopleInputElement: HTMLInputElement;
